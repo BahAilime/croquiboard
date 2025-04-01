@@ -203,7 +203,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - L
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
@@ -216,9 +216,9 @@ layers:
   - {t: Ctl+4, s: Ctl+$}
   - {t: Ctl+5, s: Ctl+%}
   - {t: Ctl+6, s: Ctl+^}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - W
+  - Sft+!
+  - Y
   - {t: Ctl+7, s: Ctl+&}
   - {t: Ctl+8, s: Ctl+*}
   - {t: Ctl+9, s: Ctl+(}
@@ -232,7 +232,7 @@ layers:
   - Sft+Ctl+%
   - Sft+Ctl+^
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - P
   - Sft+Ctl+&
   - Sft+Ctl+*
   - Sft+Ctl+(
@@ -244,7 +244,7 @@ layers:
   - U
   - Ctl+A
   - Q
-  - T
+  - H
   NUMBEROLD:
   - F1
   - F2
@@ -294,6 +294,57 @@ layers:
   - {t: '0', s: )}
   - {t: ',', s: <}
   - {t: ., s: '>'}
+  RGBCONFIG:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB BRI
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SAD
+  - RGB TOG
+  - RGB SAI
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB EFF
+  - RGB BRD
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - RGB SPD
+  - RGB SPI
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [44, 45]
   k: {t: DOOFUS, h: toggle}
+- p: [42, 47]
+  k: {t: RGBCONFIG, h: toggle}
