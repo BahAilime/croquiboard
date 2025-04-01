@@ -93,6 +93,11 @@
             bindings = <&tog 4>;
             key-positions = <44 45>;
         };
+
+        RGB {
+            bindings = <&tog 6>;
+            key-positions = <42 47>;
+        };
     };
 
     keymap {
@@ -147,13 +152,13 @@
 
         Dofus {
             bindings = <
-&kp N1            &kp N2          &kp N3             &kp N4            &kp N5             &kp N6                              &none           &kp N7            &kp N8            &kp N9            &kp N0             &kp MINUS         &kp EQUAL
-&kp LC(N1)        &kp LC(N2)      &kp LC(N3)         &kp LC(N4)        &kp LC(N5)         &kp LC(N6)                   &none  &trans  &trans  &kp LC(N7)        &kp LC(N8)        &kp LC(N9)        &kp LC(N0)         &kp LC(MINUS)     &kp LC(EQUAL)
-&kp LS(LC(EXCL))  &kp LS(LC(AT))  &kp LS(LC(POUND))  &kp LS(LC(DLLR))  &kp LS(LC(PRCNT))  &kp LS(LC(CARET))  &trans           &trans          &kp LS(LC(AMPS))  &kp LS(LC(STAR))  &kp LS(LC(LPAR))  &kp LS(LC(UNDER))  &kp LS(LC(PLUS))  &kp LS(LC(PLUS))
-                                                     &kp I             &kp S              &kp U                                               &kp LC(A)         &kp Q             &kp T
+&kp N1            &kp N2          &kp N3             &kp N4            &kp N5             &kp N6                              &kp L                &kp N7            &kp N8            &kp N9            &kp N0             &kp MINUS         &kp EQUAL
+&kp LC(N1)        &kp LC(N2)      &kp LC(N3)         &kp LC(N4)        &kp LC(N5)         &kp LC(N6)                   &kp W  &kp LS(EXCL)  &kp Y  &kp LC(N7)        &kp LC(N8)        &kp LC(N9)        &kp LC(N0)         &kp LC(MINUS)     &kp LC(EQUAL)
+&kp LS(LC(EXCL))  &kp LS(LC(AT))  &kp LS(LC(POUND))  &kp LS(LC(DLLR))  &kp LS(LC(PRCNT))  &kp LS(LC(CARET))  &trans           &kp P                &kp LS(LC(AMPS))  &kp LS(LC(STAR))  &kp LS(LC(LPAR))  &kp LS(LC(UNDER))  &kp LS(LC(PLUS))  &kp LS(LC(PLUS))
+                                                     &kp I             &kp S              &kp U                                                    &kp LC(A)         &kp Q             &kp H
             >;
 
-            sensor-bindings = <&inc_dec_kp Y W>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
             label = "DOOFUS";
         };
 
@@ -167,6 +172,18 @@
 
             label = "NUMBEROLD";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+        };
+
+        RGB {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                                               &rgb_ug RGB_BRI                   &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &rgb_ug RGB_SAD  &rgb_ug RGB_TOG  &rgb_ug RGB_SAI  &trans           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans           &rgb_ug RGB_EFF                     &rgb_ug RGB_BRD                   &trans           &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &rgb_ug RGB_SPD                                                                        &rgb_ug RGB_SPI  &trans  &trans
+            >;
+
+            label = "RGBCONFIG";
+            sensor-bindings = <&rgb_encoder>;
         };
     };
 };
