@@ -45,11 +45,11 @@ layers:
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-tab$$', h: QWERTY}
   - {t: '$$mdi:keyboard-esc$$', h: SYSTEM}
-  - {t: '$$mdi:keyboard-space$$', h: Number}
+  - {t: '$$mdi:keyboard-space$$', h: NUMBER}
   - {t: '$$mdi:backspace$$', h: SYMBOL}
   - {t: '$$mdi:backspace-reverse-outline$$', h: SYSTEM}
   - {t: '$$mdi:keyboard-return$$', h: QWERTY}
-  Number:
+  NUMBER:
   - F1
   - F2
   - F3
@@ -63,21 +63,21 @@ layers:
   - F10
   - F11
   - F12
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '6', s: ^}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '-', s: _}
+  - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
   - '@'
@@ -245,7 +245,7 @@ layers:
   - Ctl+A
   - Q
   - T
-  NUMBER:
+  NUMBEROLD:
   - F1
   - F2
   - F3
