@@ -95,8 +95,13 @@
         };
 
         RGB {
-            bindings = <&tog 6>;
+            bindings = <&tog 5>;
             key-positions = <42 47>;
+        };
+
+        basic_tog {
+            bindings = <&tog 6>;
+            key-positions = <43 46>;
         };
     };
 
@@ -162,18 +167,6 @@
             label = "DOOFUS";
         };
 
-        numberold {
-            bindings = <
-&kp F1           &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                             &kp UP                &kp PERCENT   &kp N7     &kp N8   &kp N9  &kp EQUAL  &kp BACKSPACE
-&kp F7           &kp F8    &kp F9    &kp F10    &kp F11    &kp F12                  &kp LEFT  &kp ENTER  &kp RIGHT  &kp PLUS      &kp N4     &kp N5   &kp N6  &kp MINUS  &kp ENTER
-&kp PRINTSCREEN  &mkp MB5  &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp C_MUTE              &kp DOWN              &kp ASTERISK  &kp N1     &kp N2   &kp N3  &kp FSLH   &kp CARET
-                                     &trans     &trans     &trans                                                   &kp N0        &kp COMMA  &kp DOT
-            >;
-
-            label = "NUMBEROLD";
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        };
-
         RGB {
             bindings = <
 &none  &none  &none  &none  &none            &none                                                &rgb_ug RGB_BRI                   &none            &none            &none  &none  &none  &none
@@ -184,6 +177,17 @@
 
             label = "RGBCONFIG";
             sensor-bindings = <&rgb_encoder>;
+        };
+
+        basic {
+            bindings = <
+&kp TAB    &kp Q  &kp W  &kp E   &kp R   &kp T                       &trans             &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT  &kp A  &kp S  &kp D   &kp F   &kp G             &kp LEFT  &trans  &kp RIGHT  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp RET
+&kp LCTRL  &kp Z  &kp X  &kp C   &kp V   &kp B   &trans              &trans             &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
+                         &trans  &trans  &trans                                         &trans  &trans  &trans
+            >;
+
+            label = "BASIC";
         };
     };
 };
