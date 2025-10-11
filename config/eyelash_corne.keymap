@@ -90,17 +90,17 @@
         compatible = "zmk,combos";
 
         Doofus {
-            bindings = <&tog 4>;
+            bindings = <&tog 0>;
             key-positions = <44 45>;
         };
 
         RGB {
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
             key-positions = <42 47>;
         };
 
         basic_tog {
-            bindings = <&tog 6>;
+            bindings = <&tog 5>;
             key-positions = <43 46>;
         };
     };
@@ -112,7 +112,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp ESCAPE        &kp Q             &kp W             &kp E              &kp R              &kp T                                             &mmv MOVE_UP                     &kp Y                   &kp U               &kp I               &kp O              &kp P                 &kp SINGLE_QUOTE
-&kp LEFT_SHIFT    &hrm_left LGUI A  &hrm_left LALT S  &hrm_left LCTRL D  &hrm_left LSHFT F  &kp G                             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H                   &hrm_right RSHFT J  &hrm_right RCTRL K  &hrm_right RALT L  &hrm_right RGUI SEMI  &kp DOUBLE_QUOTES
+&kp LEFT_SHIFT    &hrm_left LGUI A  &hrm_left LALT S  &hrm_left LCTRL D  &hrm_left LSHFT F  &kp G                             &mmv MOVE_LEFT  &to 6           &mmv MOVE_RIGHT  &kp H                   &hrm_right RSHFT J  &hrm_right RCTRL K  &hrm_right RALT L  &hrm_right RGUI SEMI  &kp DOUBLE_QUOTES
 &kp LEFT_CONTROL  &kp Z             &kp X             &kp C              &kp V              &kp B               &kp C_MUTE                    &mmv MOVE_DOWN                   &kp N                   &kp M               &kp COMMA           &kp DOT            &kp FSLH              &kp TAB
                                                       &layer_tap 0 TAB   &layer_tap 3 ESC   &layer_tap 1 SPACE                                                                 &layer_tap 2 BACKSPACE  &layer_tap 3 DEL    &layer_tap 0 ENTER
             >;
@@ -134,7 +134,7 @@
         symbol {
             bindings = <
 &kp EXCLAMATION  &kp LEFT_BRACE  &kp SQT    &kp DOUBLE_QUOTES  &kp RIGHT_BRACE   &kp QUESTION                                     &mmv MOVE_UP                     &kp ENTER   &kp LS(TAB)           &kp TAB           &kp SPACE          &kp BACKSPACE          &kp PERCENT
-&kp HASH         &kp CARET       &kp EQUAL  &kp UNDERSCORE     &kp DOLLAR        &kp ASTERISK                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PERIOD  &kp GRAVE             &kp AMPERSAND     &kp PLUS           &kp AT                 &kp COLON
+&kp HASH         &kp CARET       &kp EQUAL  &kp UNDERSCORE     &kp DOLLAR        &kp ASTERISK                     &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT  &kp PERIOD  &kp GRAVE             &kp AMPERSAND     &kp PLUS           &kp AT                 &kp COLON
 &kp TILDE        &kp LESS_THAN   &kp PIPE   &kp MINUS          &kp GREATER_THAN  &kp SLASH      &kp SCROLLLOCK                    &mmv MOVE_DOWN                   &kp COMMA   &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
                                             &kp PERCENT        &kp COLON         &kp SEMICOLON                                                                     &trans      &trans                &trans
             >;
@@ -147,7 +147,7 @@
             display-name = "SYSTEM";
             bindings = <
 &rgb_ug RGB_EFR  &rgb_ug RGB_EFF    &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI                                &mmv MOVE_UP                     &kp K_UNDO  &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_REDO  &sys_reset
-&bt BT_CLR       &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp RIGHT   &bootloader
+&bt BT_CLR       &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                   &mmv MOVE_LEFT  &none           &mmv MOVE_RIGHT  &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT  &kp RIGHT   &bootloader
 &bt BT_CLR_ALL   &ext_power EP_TOG  &out OUT_TOG     &rgb_ug RGB_OFF  &rgb_ug RGB_ON   &rgb_ug RGB_TOG  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp K_LOCK  &kp HOME     &kp PG_DN   &kp PG_UP  &kp END     &studio_unlock
                                                      &trans           &trans           &trans                                                                          &trans      &trans       &trans
             >;
@@ -155,24 +155,12 @@
             sensor-bindings = <&rgb_encoder>;
         };
 
-        Dofus {
-            bindings = <
-&kp N1            &kp N2          &kp N3             &kp N4            &kp N5             &kp N6                              &kp L                &kp N7            &kp N8            &kp N9            &kp N0             &kp MINUS         &kp EQUAL
-&kp LC(N1)        &kp LC(N2)      &kp LC(N3)         &kp LC(N4)        &kp LC(N5)         &kp LC(N6)                   &kp W  &kp LS(EXCL)  &kp Y  &kp LC(N7)        &kp LC(N8)        &kp LC(N9)        &kp LC(N0)         &kp LC(MINUS)     &kp LC(EQUAL)
-&kp LS(LC(EXCL))  &kp LS(LC(AT))  &kp LS(LC(POUND))  &kp LS(LC(DLLR))  &kp LS(LC(PRCNT))  &kp LS(LC(CARET))  &trans           &kp P                &kp LS(LC(AMPS))  &kp LS(LC(STAR))  &kp LS(LC(LPAR))  &kp LS(LC(UNDER))  &kp LS(LC(PLUS))  &kp LS(LC(PLUS))
-                                                     &kp I             &kp S              &kp U                                                    &kp LC(A)         &kp Q             &kp H
-            >;
-
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
-            label = "DOOFUS";
-        };
-
         RGB {
             bindings = <
-&none  &none  &none  &none  &none            &none                                                &rgb_ug RGB_BRI                   &none            &none            &none  &none  &none  &none
-&none  &none  &none  &none  &none            &none                               &rgb_ug RGB_SAD  &rgb_ug RGB_TOG  &rgb_ug RGB_SAI  &none            &none            &none  &none  &none  &none
-&none  &none  &none  &none  &none            &none            &rgb_ug RGB_EFF                     &rgb_ug RGB_BRD                   &none            &none            &none  &none  &none  &none
-                     &none  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD                                                                        &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &none
+&none  &none  &none  &none            &none            &none                                                &rgb_ug RGB_BRI                   &none            &none            &none  &none  &none  &none
+&none  &none  &none  &none            &none            &none                               &rgb_ug RGB_SAD  &none            &rgb_ug RGB_SAI  &none            &none            &none  &none  &none  &none
+&none  &none  &none  &none            &none            &none            &rgb_ug RGB_EFF                     &rgb_ug RGB_BRD                   &none            &none            &none  &none  &none  &none
+                     &rgb_ug RGB_TOG  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD                                                                        &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &none
             >;
 
             label = "RGBCONFIG";
@@ -181,13 +169,24 @@
 
         basic {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E   &kp R   &kp T                       &trans             &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHFT  &kp A  &kp S  &kp D   &kp F   &kp G             &kp LEFT  &trans  &kp RIGHT  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp RET
-&kp LCTRL  &kp Z  &kp X  &kp C   &kp V   &kp B   &trans              &trans             &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
-                         &trans  &trans  &trans                                         &trans  &trans  &trans
+&kp ESCAPE  &kp Q  &kp W  &kp E   &kp R   &kp T                       &trans             &kp Y   &kp U   &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHFT   &kp A  &kp S  &kp D   &kp F   &kp G             &kp LEFT  &trans  &kp RIGHT  &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp RET
+&kp LCTRL   &kp Z  &kp X  &kp C   &kp V   &kp B   &trans              &trans             &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
+                          &trans  &trans  &trans                                         &trans  &trans  &trans
             >;
 
             label = "BASIC";
+        };
+
+        layer-selector {
+            bindings = <
+&to 0  &to 1  &to 2  &to 3  &to 4  &to 5                  &none         &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none           &none         &none  &none  &none  &none  &none  &none
+                     &none  &none  &none                                &none  &none  &none
+            >;
+
+            label = "layer";
         };
     };
 };
